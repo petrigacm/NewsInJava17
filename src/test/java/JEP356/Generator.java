@@ -3,7 +3,6 @@ package JEP356;
 import org.junit.jupiter.api.Test;
 
 import java.util.random.RandomGenerator;
-import java.util.stream.IntStream;
 import java.util.random.RandomGeneratorFactory;
 
 public class Generator {
@@ -16,3 +15,4 @@ public class Generator {
         System.out.println(generator.nextDouble());
     }
 }
+
