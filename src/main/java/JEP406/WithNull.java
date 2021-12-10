@@ -1,16 +1,17 @@
 package JEP406;
 
-import org.junit.jupiter.api.Test;
-
 public class WithNull {
 
-    @Test
-    public void test() {
-
+    public static void main(String[] args) {
         testString("Java 16");  // Ok
         testString("Java 11");  // LTS
         testString("");         // Ok
         testString(null);       // Unknown!
+
+        testStringJava17("Java 16");  // Ok
+        testStringJava17("Java 11");  // LTS
+        testStringJava17("");         // Ok
+        testStringJava17(null);       // Unknown!
     }
 
     static void testString(String s) {

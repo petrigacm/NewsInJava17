@@ -1,4 +1,13 @@
 package JEP409;
 
-public final class Yes extends Response {
+public non-sealed class Yes implements Response {
+
 }
+
+
+
+
+
+
+
+

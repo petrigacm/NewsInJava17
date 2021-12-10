@@ -1,22 +1,20 @@
 package JEP406;
 
-import org.junit.jupiter.api.Test;
 
-public class Refine {
-    class Shape {
+public class Guraded {
+    static class Shape {
     }
 
-    class Rectangle extends Shape {
+    static class Rectangle extends Shape {
     }
 
-    class Triangle extends Shape {
+    static class Triangle extends Shape {
         int calculateArea() {
             return 1000;
         }
     }
 
-    @Test
-    public void test() {
+    public static void main(String[] args) {
         testTriangle(new Triangle());
         testTriangle2(new Triangle());
     }
@@ -43,7 +41,7 @@ public class Refine {
             }
             // so-called redefined patterns or guarded patterns
             case Triangle t && (t.calculateArea() > 100) -> System.out.println("Large triangle");
-            case Triangle t -> System.out.println("Triangle");
+            case Triangle ignored -> System.out.println("Triangle");
             default -> System.out.println("Unknown!");
         }
     }
